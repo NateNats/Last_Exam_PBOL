@@ -654,7 +654,7 @@
             <Container class="javax.swing.JPanel" name="navbar">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="64" green="ba" red="e9" type="rgb"/>
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
               </Properties>
 
@@ -662,9 +662,26 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="logoNavbar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="43" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="textMenuUtama" min="-2" max="-2" attributes="0"/>
+                              <Component id="logoNavbar" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="kelaskuButton" min="-2" max="-2" attributes="0"/>
+                                      <Component id="dashboardButton" min="-2" max="-2" attributes="0"/>
+                                      <Component id="pesertaButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="keuanganButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="editProfileButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="textAkunSaya" min="-2" max="-2" attributes="0"/>
+                                          <Component id="editProfileButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="46" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -673,7 +690,23 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Component id="logoNavbar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="textMenuUtama" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="dashboardButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="kelaskuButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                          <Component id="pesertaButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="keuanganButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="textAkunSaya" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="editProfileButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="editProfileButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="260" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -688,12 +721,100 @@
                       <Font name="Playfair Display" size="18" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="0" green="99" red="ff" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Logo Sadhar1.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="SIA USD"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="textMenuUtama">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Playfair Display" size="18" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="MENU UTAMA"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="dashboardButton">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Playfair Display" size="14" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="E:\tugas tugas kuliah\Semester 3\New folder\Last_Exam_PBOL\src\main\resources\logo-dashboard.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="  Dashboard"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="kelaskuButton">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Playfair Display" size="14" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="E:\tugas tugas kuliah\Semester 3\New folder\Last_Exam_PBOL\src\main\resources\logo-kelasku.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="     Kelasku"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="pesertaButton">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Playfair Display" size="14" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="E:\tugas tugas kuliah\Semester 3\New folder\Last_Exam_PBOL\src\main\resources\logo-peserta-kelas.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Peserta Kelas"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="keuanganButton">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Playfair Display" size="14" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="E:\tugas tugas kuliah\Semester 3\New folder\Last_Exam_PBOL\src\main\resources\logo-keuangan.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="    Keuangan "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="textAkunSaya">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Playfair Display" size="18" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Akun Saya"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="editProfileButton">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Playfair Display" size="14" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="E:\tugas tugas kuliah\Semester 3\New folder\Last_Exam_PBOL\src\main\resources\logo-profile.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Edit Profile"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="editProfileButton1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Playfair Display" size="14" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="E:\tugas tugas kuliah\Semester 3\New folder\Last_Exam_PBOL\src\main\resources\logo-logout.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="    Log Out"/>
                   </Properties>
                 </Component>
               </SubComponents>

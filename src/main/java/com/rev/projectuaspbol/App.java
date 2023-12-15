@@ -92,6 +92,14 @@ public class App extends javax.swing.JFrame {
         body = new javax.swing.JPanel();
         navbar = new javax.swing.JPanel();
         logoNavbar = new javax.swing.JLabel();
+        textMenuUtama = new javax.swing.JLabel();
+        dashboardButton = new javax.swing.JLabel();
+        kelaskuButton = new javax.swing.JLabel();
+        pesertaButton = new javax.swing.JLabel();
+        keuanganButton = new javax.swing.JLabel();
+        textAkunSaya = new javax.swing.JLabel();
+        editProfileButton = new javax.swing.JLabel();
+        editProfileButton1 = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
         dashboard = new javax.swing.JPanel();
         dashboard2 = new javax.swing.JPanel();
@@ -497,29 +505,90 @@ public class App extends javax.swing.JFrame {
 
         app.add(login, "card4");
 
-        navbar.setBackground(new java.awt.Color(233, 186, 100));
+        navbar.setBackground(new java.awt.Color(255, 255, 255));
 
         logoNavbar.setBackground(new java.awt.Color(255, 255, 255));
         logoNavbar.setFont(new java.awt.Font("Playfair Display", 0, 18)); // NOI18N
-        logoNavbar.setForeground(new java.awt.Color(255, 255, 255));
+        logoNavbar.setForeground(new java.awt.Color(255, 153, 0));
         logoNavbar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo Sadhar1.png"))); // NOI18N
         logoNavbar.setText("SIA USD");
+
+        textMenuUtama.setBackground(new java.awt.Color(255, 255, 255));
+        textMenuUtama.setFont(new java.awt.Font("Playfair Display", 0, 18)); // NOI18N
+        textMenuUtama.setText("MENU UTAMA");
+
+        dashboardButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
+        dashboardButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-dashboard.png")); // NOI18N
+        dashboardButton.setText("  Dashboard");
+
+        kelaskuButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
+        kelaskuButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-kelasku.png")); // NOI18N
+        kelaskuButton.setText("     Kelasku");
+
+        pesertaButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
+        pesertaButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-peserta-kelas.png")); // NOI18N
+        pesertaButton.setText("Peserta Kelas");
+
+        keuanganButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
+        keuanganButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-keuangan.png")); // NOI18N
+        keuanganButton.setText("    Keuangan ");
+
+        textAkunSaya.setBackground(new java.awt.Color(255, 255, 255));
+        textAkunSaya.setFont(new java.awt.Font("Playfair Display", 0, 18)); // NOI18N
+        textAkunSaya.setText("Akun Saya");
+
+        editProfileButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
+        editProfileButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-profile.png")); // NOI18N
+        editProfileButton.setText("Edit Profile");
+
+        editProfileButton1.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
+        editProfileButton1.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-logout.png")); // NOI18N
+        editProfileButton1.setText("    Log Out");
 
         javax.swing.GroupLayout navbarLayout = new javax.swing.GroupLayout(navbar);
         navbar.setLayout(navbarLayout);
         navbarLayout.setHorizontalGroup(
             navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navbarLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(logoNavbar)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textMenuUtama)
+                    .addComponent(logoNavbar)
+                    .addGroup(navbarLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(kelaskuButton)
+                            .addComponent(dashboardButton)
+                            .addComponent(pesertaButton)
+                            .addComponent(keuanganButton)
+                            .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(editProfileButton)
+                                .addComponent(textAkunSaya)
+                                .addComponent(editProfileButton1, javax.swing.GroupLayout.Alignment.LEADING)))))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         navbarLayout.setVerticalGroup(
             navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navbarLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(logoNavbar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(textMenuUtama)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dashboardButton)
+                .addGap(18, 18, 18)
+                .addComponent(kelaskuButton)
+                .addGap(15, 15, 15)
+                .addComponent(pesertaButton)
+                .addGap(18, 18, 18)
+                .addComponent(keuanganButton)
+                .addGap(33, 33, 33)
+                .addComponent(textAkunSaya)
+                .addGap(18, 18, 18)
+                .addComponent(editProfileButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(editProfileButton1)
+                .addContainerGap(260, Short.MAX_VALUE))
         );
 
         content.setBackground(new java.awt.Color(204, 255, 51));
@@ -772,6 +841,9 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JTextField daftarPasswordField;
     private javax.swing.JPanel dashboard;
     private javax.swing.JPanel dashboard2;
+    private javax.swing.JLabel dashboardButton;
+    private javax.swing.JLabel editProfileButton;
+    private javax.swing.JLabel editProfileButton1;
     private javax.swing.JRadioButton externalButton;
     private javax.swing.ButtonGroup groupTipeMahasiswa;
     private javax.swing.JRadioButton internalButon;
@@ -783,6 +855,8 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel judul_panel_daftar;
     private javax.swing.JPanel kelasku;
     private javax.swing.JPanel kelasku2;
+    private javax.swing.JLabel kelaskuButton;
+    private javax.swing.JLabel keuanganButton;
     private javax.swing.JLabel labelAlamatField;
     private javax.swing.JLabel labelNamaField;
     private javax.swing.JLabel labelNimField;
@@ -801,8 +875,11 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JPanel panelDaftar;
     private javax.swing.JTextField passwordField;
     private javax.swing.JPanel passwordPanelField;
+    private javax.swing.JLabel pesertaButton;
     private javax.swing.JPanel pesertaKelas;
     private javax.swing.JRadioButton profesionalButton;
+    private javax.swing.JLabel textAkunSaya;
+    private javax.swing.JLabel textMenuUtama;
     private javax.swing.JPanel transaksi;
     // End of variables declaration//GEN-END:variables
 }
