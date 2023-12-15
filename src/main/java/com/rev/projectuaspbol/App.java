@@ -16,7 +16,7 @@ public class App extends javax.swing.JFrame {
     
     Color warna_utama = new Color(254,115,93);
     Color warna_default = new Color(184,207,229);
-    CardLayout cardLogin,cardBody;
+    CardLayout cardLogin,cardBody,cardContent;
     
     
     public App() {
@@ -44,6 +44,8 @@ public class App extends javax.swing.JFrame {
         
         cardLogin = (CardLayout)(login.getLayout());
         cardBody = (CardLayout) (app.getLayout());
+        cardContent = (CardLayout) (content.getLayout());
+        
     }
 
     /**
@@ -89,7 +91,7 @@ public class App extends javax.swing.JFrame {
         profesionalButton = new javax.swing.JRadioButton();
         body = new javax.swing.JPanel();
         navbar = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        logoNavbar = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
         dashboard = new javax.swing.JPanel();
         dashboard2 = new javax.swing.JPanel();
@@ -495,11 +497,13 @@ public class App extends javax.swing.JFrame {
 
         app.add(login, "card4");
 
-        navbar.setBackground(new java.awt.Color(255, 255, 255));
+        navbar.setBackground(new java.awt.Color(233, 186, 100));
 
-        jLabel5.setFont(new java.awt.Font("Playfair Display", 0, 18)); // NOI18N
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo Sadhar1.png"))); // NOI18N
-        jLabel5.setText("SIA USD");
+        logoNavbar.setBackground(new java.awt.Color(255, 255, 255));
+        logoNavbar.setFont(new java.awt.Font("Playfair Display", 0, 18)); // NOI18N
+        logoNavbar.setForeground(new java.awt.Color(255, 255, 255));
+        logoNavbar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo Sadhar1.png"))); // NOI18N
+        logoNavbar.setText("SIA USD");
 
         javax.swing.GroupLayout navbarLayout = new javax.swing.GroupLayout(navbar);
         navbar.setLayout(navbarLayout);
@@ -507,14 +511,14 @@ public class App extends javax.swing.JFrame {
             navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navbarLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(jLabel5)
+                .addComponent(logoNavbar)
                 .addContainerGap(43, Short.MAX_VALUE))
         );
         navbarLayout.setVerticalGroup(
             navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navbarLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jLabel5)
+                .addComponent(logoNavbar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -534,7 +538,7 @@ public class App extends javax.swing.JFrame {
             .addGap(0, 633, Short.MAX_VALUE)
         );
 
-        content.add(dashboard, "card2");
+        content.add(dashboard, "dashboardCard");
 
         javax.swing.GroupLayout dashboard2Layout = new javax.swing.GroupLayout(dashboard2);
         dashboard2.setLayout(dashboard2Layout);
@@ -715,6 +719,7 @@ public class App extends javax.swing.JFrame {
         } else {
             alertNotif.setForeground(Color.blue);
             cardBody.show(app, "mainMenu");
+            cardContent.show(content, "dashboardContent");
         }
     }//GEN-LAST:event_loginButtonActionPerformed
 
@@ -773,7 +778,6 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel judul_panel_daftar;
@@ -788,6 +792,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JPanel loginPanel;
     private javax.swing.JLabel logoDaftar;
     private javax.swing.JLabel logoLogin;
+    private javax.swing.JLabel logoNavbar;
     private javax.swing.JLabel logoNim;
     private javax.swing.JLabel logoUser;
     private javax.swing.JPanel navbar;
