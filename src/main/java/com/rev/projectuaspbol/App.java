@@ -99,9 +99,12 @@ public class App extends javax.swing.JFrame {
         keuanganButton = new javax.swing.JLabel();
         textAkunSaya = new javax.swing.JLabel();
         editProfileButton = new javax.swing.JLabel();
-        editProfileButton1 = new javax.swing.JLabel();
+        logOutButton = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
         dashboard = new javax.swing.JPanel();
+        selamatDatangPanel = new javax.swing.JPanel();
+        logoSelamatDatang = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         dashboard2 = new javax.swing.JPanel();
         kelasku = new javax.swing.JPanel();
         kelasku2 = new javax.swing.JPanel();
@@ -302,7 +305,7 @@ public class App extends javax.swing.JFrame {
                     .addGroup(loginPanelLayout.createSequentialGroup()
                         .addGap(271, 271, 271)
                         .addComponent(alertNotif)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
                 .addComponent(panelDaftar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         loginPanelLayout.setVerticalGroup(
@@ -319,7 +322,7 @@ public class App extends javax.swing.JFrame {
                 .addComponent(alertNotif, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         login.add(loginPanel, "loginCard");
@@ -461,7 +464,7 @@ public class App extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(profesionalButton))
                     .addComponent(daftarNamaField, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(134, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, daftaPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(daftarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -498,7 +501,7 @@ public class App extends javax.swing.JFrame {
                 .addComponent(daftarPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(daftarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         login.add(daftaPanel, "daftarCard");
@@ -541,9 +544,9 @@ public class App extends javax.swing.JFrame {
         editProfileButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-profile.png")); // NOI18N
         editProfileButton.setText("Edit Profile");
 
-        editProfileButton1.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
-        editProfileButton1.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-logout.png")); // NOI18N
-        editProfileButton1.setText("    Log Out");
+        logOutButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
+        logOutButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-logout.png")); // NOI18N
+        logOutButton.setText("    Log Out");
 
         javax.swing.GroupLayout navbarLayout = new javax.swing.GroupLayout(navbar);
         navbar.setLayout(navbarLayout);
@@ -564,7 +567,7 @@ public class App extends javax.swing.JFrame {
                             .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(editProfileButton)
                                 .addComponent(textAkunSaya)
-                                .addComponent(editProfileButton1, javax.swing.GroupLayout.Alignment.LEADING)))))
+                                .addComponent(logOutButton, javax.swing.GroupLayout.Alignment.LEADING)))))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
         navbarLayout.setVerticalGroup(
@@ -587,8 +590,8 @@ public class App extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(editProfileButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(editProfileButton1)
-                .addContainerGap(260, Short.MAX_VALUE))
+                .addComponent(logOutButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         content.setBackground(new java.awt.Color(204, 255, 51));
@@ -596,15 +599,51 @@ public class App extends javax.swing.JFrame {
 
         dashboard.setBackground(new java.awt.Color(246, 253, 255));
 
+        selamatDatangPanel.setBackground(new java.awt.Color(255, 192, 140));
+
+        logoSelamatDatang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo-selamat-datang.png"))); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 102, 51));
+        jLabel4.setText("SELAMAT DATANG");
+
+        javax.swing.GroupLayout selamatDatangPanelLayout = new javax.swing.GroupLayout(selamatDatangPanel);
+        selamatDatangPanel.setLayout(selamatDatangPanelLayout);
+        selamatDatangPanelLayout.setHorizontalGroup(
+            selamatDatangPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, selamatDatangPanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 389, Short.MAX_VALUE)
+                .addComponent(logoSelamatDatang)
+                .addGap(31, 31, 31))
+        );
+        selamatDatangPanelLayout.setVerticalGroup(
+            selamatDatangPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(selamatDatangPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(logoSelamatDatang, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE))
+            .addGroup(selamatDatangPanelLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel4)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout dashboardLayout = new javax.swing.GroupLayout(dashboard);
         dashboard.setLayout(dashboardLayout);
         dashboardLayout.setHorizontalGroup(
             dashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 836, Short.MAX_VALUE)
+            .addGroup(dashboardLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(selamatDatangPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         dashboardLayout.setVerticalGroup(
             dashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
+            .addGroup(dashboardLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(selamatDatangPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(435, Short.MAX_VALUE))
         );
 
         content.add(dashboard, "dashboardCard");
@@ -613,11 +652,11 @@ public class App extends javax.swing.JFrame {
         dashboard2.setLayout(dashboard2Layout);
         dashboard2Layout.setHorizontalGroup(
             dashboard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 836, Short.MAX_VALUE)
+            .addGap(0, 810, Short.MAX_VALUE)
         );
         dashboard2Layout.setVerticalGroup(
             dashboard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
 
         content.add(dashboard2, "card3");
@@ -626,11 +665,11 @@ public class App extends javax.swing.JFrame {
         kelasku.setLayout(kelaskuLayout);
         kelaskuLayout.setHorizontalGroup(
             kelaskuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 836, Short.MAX_VALUE)
+            .addGap(0, 810, Short.MAX_VALUE)
         );
         kelaskuLayout.setVerticalGroup(
             kelaskuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
 
         content.add(kelasku, "card4");
@@ -639,11 +678,11 @@ public class App extends javax.swing.JFrame {
         kelasku2.setLayout(kelasku2Layout);
         kelasku2Layout.setHorizontalGroup(
             kelasku2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 836, Short.MAX_VALUE)
+            .addGap(0, 810, Short.MAX_VALUE)
         );
         kelasku2Layout.setVerticalGroup(
             kelasku2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
 
         content.add(kelasku2, "card5");
@@ -652,11 +691,11 @@ public class App extends javax.swing.JFrame {
         pesertaKelas.setLayout(pesertaKelasLayout);
         pesertaKelasLayout.setHorizontalGroup(
             pesertaKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 836, Short.MAX_VALUE)
+            .addGap(0, 810, Short.MAX_VALUE)
         );
         pesertaKelasLayout.setVerticalGroup(
             pesertaKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
 
         content.add(pesertaKelas, "card6");
@@ -665,11 +704,11 @@ public class App extends javax.swing.JFrame {
         transaksi.setLayout(transaksiLayout);
         transaksiLayout.setHorizontalGroup(
             transaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 836, Short.MAX_VALUE)
+            .addGap(0, 810, Short.MAX_VALUE)
         );
         transaksiLayout.setVerticalGroup(
             transaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
 
         content.add(transaksi, "card7");
@@ -843,13 +882,13 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JPanel dashboard2;
     private javax.swing.JLabel dashboardButton;
     private javax.swing.JLabel editProfileButton;
-    private javax.swing.JLabel editProfileButton1;
     private javax.swing.JRadioButton externalButton;
     private javax.swing.ButtonGroup groupTipeMahasiswa;
     private javax.swing.JRadioButton internalButon;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel judul_panel_daftar;
@@ -861,6 +900,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel labelNamaField;
     private javax.swing.JLabel labelNimField;
     private javax.swing.JLabel labelPasswordField;
+    private javax.swing.JLabel logOutButton;
     private javax.swing.JPanel login;
     private javax.swing.JButton loginButton;
     private javax.swing.JPanel loginPanel;
@@ -868,6 +908,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel logoLogin;
     private javax.swing.JLabel logoNavbar;
     private javax.swing.JLabel logoNim;
+    private javax.swing.JLabel logoSelamatDatang;
     private javax.swing.JLabel logoUser;
     private javax.swing.JPanel navbar;
     private javax.swing.JTextField nimField;
@@ -878,6 +919,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel pesertaButton;
     private javax.swing.JPanel pesertaKelas;
     private javax.swing.JRadioButton profesionalButton;
+    private javax.swing.JPanel selamatDatangPanel;
     private javax.swing.JLabel textAkunSaya;
     private javax.swing.JLabel textMenuUtama;
     private javax.swing.JPanel transaksi;
