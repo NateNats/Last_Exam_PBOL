@@ -78,7 +78,7 @@
                                   <Component id="loginButton" min="-2" pref="120" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="271" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="229" max="-2" attributes="0"/>
                                   <Component id="alertNotif" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -383,7 +383,7 @@
                 </Container>
                 <Component class="javax.swing.JLabel" name="alertNotif">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="asdadasdasdsad"/>
+                    <Property name="text" type="java.lang.String" value="NIM / PASSWORD ANDA SALAH"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -866,6 +866,13 @@
                               <Component id="selamatDatangPanel" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
@@ -874,6 +881,13 @@
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Component id="selamatDatangPanel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="432" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -986,6 +1000,14 @@
                         </Component>
                       </SubComponents>
                     </Container>
+                    <Component class="javax.swing.JLabel" name="jLabel15">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="66" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Belum Ada Kelas"/>
+                      </Properties>
+                    </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="dashboardAktif">
@@ -1332,6 +1354,11 @@
                   </Layout>
                 </Container>
                 <Container class="javax.swing.JPanel" name="pesertaKelas">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ba" green="f9" red="ff" type="rgb"/>
+                    </Property>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
                       <CardConstraints cardName="pesertaCard"/>
@@ -1344,12 +1371,24 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="labelMataKuliah3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="mataKuliah3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="labelMataKuliah2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="mataKuliah2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <Component id="jScrollPane3" min="-2" pref="588" max="-2" attributes="0"/>
                                   <Component id="jScrollPane2" min="-2" pref="588" max="-2" attributes="0"/>
                                   <Component id="jScrollPane1" min="-2" pref="588" max="-2" attributes="0"/>
-                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="labelMataKuliah1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="mataKuliah1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace pref="170" max="32767" attributes="0"/>
                           </Group>
@@ -1359,15 +1398,24 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="labelMataKuliah1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mataKuliah1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jScrollPane1" min="-2" pref="105" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="labelMataKuliah2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mataKuliah2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jScrollPane2" min="-2" pref="105" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="labelMataKuliah3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mataKuliah3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jScrollPane3" min="-2" pref="105" max="-2" attributes="0"/>
                               <EmptySpace pref="77" max="32767" attributes="0"/>
@@ -1376,9 +1424,23 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel4">
+                    <Component class="javax.swing.JLabel" name="labelMataKuliah1">
                       <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="66" red="ff" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="MATA KULIAH"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="mataKuliah1">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="12" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="66" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Algoritma Program"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -1388,20 +1450,49 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTable" name="jTable1">
+                        <Component class="javax.swing.JTable" name="tabelPesertaMatkul1">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="4" rowCount="4">
-                                <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                              <Table columnCount="3" rowCount="4">
+                                <Column editable="true" title="NIM" type="java.lang.Object"/>
+                                <Column editable="true" title="NAMA" type="java.lang.Object"/>
+                                <Column editable="true" title="TIPE MAHASISWA" type="java.lang.Object"/>
                               </Table>
+                            </Property>
+                            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                              <TableColumnModel selectionModel="0">
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                              </TableColumnModel>
+                            </Property>
+                            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                             </Property>
                           </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
+                    <Component class="javax.swing.JLabel" name="labelMataKuliah2">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="66" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="MATA KULIAH"/>
+                      </Properties>
+                    </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
                       <AuxValues>
                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -1409,20 +1500,49 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTable" name="jTable2">
+                        <Component class="javax.swing.JTable" name="tabelPesertaMatkul2">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="4" rowCount="4">
-                                <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                              <Table columnCount="3" rowCount="4">
+                                <Column editable="true" title="NIM" type="java.lang.Object"/>
+                                <Column editable="true" title="NAMA" type="java.lang.Object"/>
+                                <Column editable="true" title="TIPE MAHASISWA" type="java.lang.Object"/>
                               </Table>
+                            </Property>
+                            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                              <TableColumnModel selectionModel="0">
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                              </TableColumnModel>
+                            </Property>
+                            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                             </Property>
                           </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
+                    <Component class="javax.swing.JLabel" name="labelMataKuliah3">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="66" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="MATA KULIAH"/>
+                      </Properties>
+                    </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane3">
                       <AuxValues>
                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -1430,28 +1550,61 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTable" name="jTable3">
+                        <Component class="javax.swing.JTable" name="tabelPesertaMatkul3">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="4" rowCount="4">
-                                <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                              <Table columnCount="3" rowCount="4">
+                                <Column editable="true" title="NIM" type="java.lang.Object"/>
+                                <Column editable="true" title="NAMA" type="java.lang.Object"/>
+                                <Column editable="true" title="TIPE MAHASISWA" type="java.lang.Object"/>
                               </Table>
+                            </Property>
+                            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                              <TableColumnModel selectionModel="0">
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                              </TableColumnModel>
+                            </Property>
+                            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                             </Property>
                           </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="jLabel5">
+                    <Component class="javax.swing.JLabel" name="mataKuliah2">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="MATA KULIAH"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="12" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="66" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Pemrograman Analisis Data"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel6">
+                    <Component class="javax.swing.JLabel" name="mataKuliah3">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="MATA KULIAH"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="12" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="66" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Internet Dan App"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1475,13 +1628,13 @@
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jScrollPane4" max="32767" attributes="0"/>
-                                  <Component id="selamatDatangPanel1" max="32767" attributes="0"/>
+                                  <Component id="panelInfoPeserta" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="339" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" pref="124" max="-2" attributes="0"/>
+                              <Component id="bayarButton" min="-2" pref="124" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1490,18 +1643,18 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="selamatDatangPanel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="panelInfoPeserta" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                               <Component id="jScrollPane4" min="-2" pref="255" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <Component id="bayarButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="53" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Container class="javax.swing.JPanel" name="selamatDatangPanel1">
+                    <Container class="javax.swing.JPanel" name="panelInfoPeserta">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="8c" green="c0" red="ff" type="rgb"/>
@@ -1646,13 +1799,13 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTable" name="jTable4">
+                        <Component class="javax.swing.JTable" name="tabelTransaksi">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="3" rowCount="4">
-                                <Column editable="false" title="Title 1" type="java.lang.Object"/>
-                                <Column editable="false" title="Title 2" type="java.lang.Object"/>
-                                <Column editable="false" title="Title 3" type="java.lang.Object"/>
+                                <Column editable="false" title="Kode Matkul" type="java.lang.Object"/>
+                                <Column editable="false" title="Nama Matkul" type="java.lang.Object"/>
+                                <Column editable="false" title="Biaya" type="java.lang.Object"/>
                               </Table>
                             </Property>
                             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -1681,17 +1834,28 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="jButton1">
+                    <Component class="javax.swing.JButton" name="bayarButton">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="5d" green="73" red="fe" type="rgb"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="BAYAR"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bayarButtonActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="editProfile">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ba" green="f9" red="ff" type="rgb"/>
+                    </Property>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
                       <CardConstraints cardName="editProfileCard"/>
@@ -1703,7 +1867,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                              <Component id="logoEditProfile" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
@@ -1712,17 +1876,17 @@
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="labelNimField1" min="-2" max="-2" attributes="0"/>
                                               <Component id="labelNamaField1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="daftarNamaField1" pref="273" max="32767" attributes="0"/>
+                                              <Component id="ubahNamaField" pref="273" max="32767" attributes="0"/>
                                               <Component id="labelAlamatField1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="daftarAlamatField1" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="daftarNimField1" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="ubahAlamatField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="ubahNimField" alignment="0" max="32767" attributes="0"/>
                                           </Group>
-                                          <Component id="daftarPasswordField1" min="-2" pref="276" max="-2" attributes="0"/>
+                                          <Component id="ubahPasswordField" min="-2" pref="276" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
-                                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ubahButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="55" max="32767" attributes="0"/>
@@ -1737,23 +1901,23 @@
                                   <Group type="102" attributes="0">
                                       <Component id="labelNamaField1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="daftarNamaField1" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="ubahNamaField" min="-2" pref="31" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                       <Component id="labelAlamatField1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="daftarAlamatField1" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="ubahAlamatField" min="-2" pref="31" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="labelNimField1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="daftarNimField1" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="ubahNimField" min="-2" pref="31" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="labelPasswordField1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="daftarPasswordField1" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="ubahPasswordField" min="-2" pref="31" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ubahButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                  <Component id="logoEditProfile" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="118" max="32767" attributes="0"/>
                           </Group>
@@ -1761,6 +1925,13 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
+                    <Component class="javax.swing.JLabel" name="logoEditProfile">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/logo-edit-profile.png"/>
+                        </Property>
+                      </Properties>
+                    </Component>
                     <Component class="javax.swing.JLabel" name="labelNamaField1">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1772,11 +1943,11 @@
                         <Property name="text" type="java.lang.String" value="Nama Lengkap"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="daftarNamaField1">
+                    <Component class="javax.swing.JTextField" name="ubahNamaField">
                       <Events>
-                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="daftarNamaField1FocusGained"/>
-                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="daftarNamaField1FocusLost"/>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="daftarNamaField1ActionPerformed"/>
+                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="ubahNamaFieldFocusGained"/>
+                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="ubahNamaFieldFocusLost"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ubahNamaFieldActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelAlamatField1">
@@ -1790,11 +1961,11 @@
                         <Property name="text" type="java.lang.String" value="Alamat"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="daftarAlamatField1">
+                    <Component class="javax.swing.JTextField" name="ubahAlamatField">
                       <Events>
-                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="daftarAlamatField1FocusGained"/>
-                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="daftarAlamatField1FocusLost"/>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="daftarAlamatField1ActionPerformed"/>
+                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="ubahAlamatFieldFocusGained"/>
+                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="ubahAlamatFieldFocusLost"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ubahAlamatFieldActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelNimField1">
@@ -1808,11 +1979,11 @@
                         <Property name="text" type="java.lang.String" value="Nim"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="daftarNimField1">
+                    <Component class="javax.swing.JTextField" name="ubahNimField">
                       <Events>
-                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="daftarNimField1FocusGained"/>
-                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="daftarNimField1FocusLost"/>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="daftarNimField1ActionPerformed"/>
+                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="ubahNimFieldFocusGained"/>
+                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="ubahNimFieldFocusLost"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ubahNimFieldActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelPasswordField1">
@@ -1826,26 +1997,25 @@
                         <Property name="text" type="java.lang.String" value="Password"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="daftarPasswordField1">
+                    <Component class="javax.swing.JTextField" name="ubahPasswordField">
                       <Events>
-                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="daftarPasswordField1FocusGained"/>
-                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="daftarPasswordField1FocusLost"/>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="daftarPasswordField1ActionPerformed"/>
+                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="ubahPasswordFieldFocusGained"/>
+                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="ubahPasswordFieldFocusLost"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ubahPasswordFieldActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel14">
+                    <Component class="javax.swing.JButton" name="ubahButton">
                       <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/logo-edit-profile.png"/>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="5d" green="73" red="fe" type="rgb"/>
                         </Property>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="jButton2">
-                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="UBAH"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ubahButtonActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
