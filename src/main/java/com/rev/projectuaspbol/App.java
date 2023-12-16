@@ -578,12 +578,12 @@ public class App extends javax.swing.JFrame {
         logoNavbar.setText("SIA USD");
 
         textMenuUtama.setBackground(new java.awt.Color(255, 255, 255));
-        textMenuUtama.setFont(new java.awt.Font("Playfair Display", 0, 18)); // NOI18N
+        textMenuUtama.setFont(new java.awt.Font("Playfair Display", 0, 16)); // NOI18N
         textMenuUtama.setText("MENU UTAMA");
 
         dashboardButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
-        dashboardButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-dashboard.png")); // NOI18N
-        dashboardButton.setText("  Dashboard");
+        dashboardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo-dashboard.png"))); // NOI18N
+        dashboardButton.setText(" Dashboard");
         dashboardButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 dashboardButtonMouseClicked(evt);
@@ -591,8 +591,8 @@ public class App extends javax.swing.JFrame {
         });
 
         kelaskuButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
-        kelaskuButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-kelasku.png")); // NOI18N
-        kelaskuButton.setText("     Kelasku");
+        kelaskuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo-kelasku.png"))); // NOI18N
+        kelaskuButton.setText(" Kelasku");
         kelaskuButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 kelaskuButtonMouseClicked(evt);
@@ -600,7 +600,7 @@ public class App extends javax.swing.JFrame {
         });
 
         pesertaButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
-        pesertaButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-peserta-kelas.png")); // NOI18N
+        pesertaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo-peserta-kelas.png"))); // NOI18N
         pesertaButton.setText("Peserta Kelas");
         pesertaButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -609,8 +609,8 @@ public class App extends javax.swing.JFrame {
         });
 
         keuanganButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
-        keuanganButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-keuangan.png")); // NOI18N
-        keuanganButton.setText("    Keuangan ");
+        keuanganButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo-keuangan.png"))); // NOI18N
+        keuanganButton.setText(" Keuangan ");
         keuanganButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 keuanganButtonMouseClicked(evt);
@@ -622,7 +622,7 @@ public class App extends javax.swing.JFrame {
         textAkunSaya.setText("Akun Saya");
 
         editProfileButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
-        editProfileButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-profile.png")); // NOI18N
+        editProfileButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo-profile.png"))); // NOI18N
         editProfileButton.setText("Edit Profile");
         editProfileButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -631,8 +631,8 @@ public class App extends javax.swing.JFrame {
         });
 
         logOutButton.setFont(new java.awt.Font("Playfair Display", 0, 14)); // NOI18N
-        logOutButton.setIcon(new javax.swing.ImageIcon("E:\\tugas tugas kuliah\\Semester 3\\New folder\\Last_Exam_PBOL\\src\\main\\resources\\logo-logout.png")); // NOI18N
-        logOutButton.setText("    Log Out");
+        logOutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo-logout.png"))); // NOI18N
+        logOutButton.setText("Log Out");
         logOutButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 logOutButtonMouseClicked(evt);
@@ -644,43 +644,42 @@ public class App extends javax.swing.JFrame {
         navbarLayout.setHorizontalGroup(
             navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navbarLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addContainerGap()
                 .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textMenuUtama)
                     .addComponent(logoNavbar)
+                    .addComponent(textAkunSaya)
+                    .addComponent(textMenuUtama)
                     .addGroup(navbarLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addGap(12, 12, 12)
                         .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(kelaskuButton)
-                            .addComponent(dashboardButton)
-                            .addComponent(pesertaButton)
                             .addComponent(keuanganButton)
-                            .addGroup(navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(editProfileButton)
-                                .addComponent(textAkunSaya)
-                                .addComponent(logOutButton, javax.swing.GroupLayout.Alignment.LEADING)))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                            .addComponent(pesertaButton)
+                            .addComponent(editProfileButton)
+                            .addComponent(logOutButton)
+                            .addComponent(dashboardButton)
+                            .addComponent(kelaskuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         navbarLayout.setVerticalGroup(
             navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navbarLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addComponent(logoNavbar)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(textMenuUtama)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(30, 30, 30)
                 .addComponent(dashboardButton)
                 .addGap(18, 18, 18)
                 .addComponent(kelaskuButton)
-                .addGap(15, 15, 15)
+                .addGap(18, 18, 18)
                 .addComponent(pesertaButton)
                 .addGap(18, 18, 18)
                 .addComponent(keuanganButton)
-                .addGap(33, 33, 33)
+                .addGap(36, 36, 36)
                 .addComponent(textAkunSaya)
                 .addGap(18, 18, 18)
                 .addComponent(editProfileButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(logOutButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -726,7 +725,7 @@ public class App extends javax.swing.JFrame {
                         .addGroup(selamatDatangPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textTambahan2)
                             .addComponent(textTambahan1))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addComponent(logoSelamatDatang)
                 .addGap(43, 43, 43))
         );
@@ -817,7 +816,7 @@ public class App extends javax.swing.JFrame {
                         .addGroup(selamatDatangPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textTambahan4)
                             .addComponent(textTambahan3))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addComponent(logoSelamatDatang1)
                 .addGap(43, 43, 43))
         );
@@ -909,7 +908,7 @@ public class App extends javax.swing.JFrame {
                         .addComponent(mataKuliahPilihan3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(mataKuliahPilihan1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(tambahMatkulButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(logoPanelKelasku)
                 .addGap(46, 46, 46))
         );
@@ -946,7 +945,7 @@ public class App extends javax.swing.JFrame {
         kelaskuAktif.setLayout(kelaskuAktifLayout);
         kelaskuAktifLayout.setHorizontalGroup(
             kelaskuAktifLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 824, Short.MAX_VALUE)
+            .addGap(0, 804, Short.MAX_VALUE)
         );
         kelaskuAktifLayout.setVerticalGroup(
             kelaskuAktifLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1039,7 +1038,7 @@ public class App extends javax.swing.JFrame {
                         .addComponent(labelMataKuliah1)
                         .addGap(18, 18, 18)
                         .addComponent(mataKuliah1)))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
         pesertaKelasLayout.setVerticalGroup(
             pesertaKelasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1114,7 +1113,7 @@ public class App extends javax.swing.JFrame {
                     .addComponent(jLabel13)
                     .addComponent(jLabel12)
                     .addComponent(jLabel11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 284, Short.MAX_VALUE)
                 .addComponent(logoSelamatDatang2)
                 .addGap(43, 43, 43))
         );
@@ -1311,7 +1310,7 @@ public class App extends javax.swing.JFrame {
                     .addGroup(editProfileLayout.createSequentialGroup()
                         .addGap(153, 153, 153)
                         .addComponent(ubahButton)))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         editProfileLayout.setVerticalGroup(
             editProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1354,7 +1353,7 @@ public class App extends javax.swing.JFrame {
         bodyLayout.setVerticalGroup(
             bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(navbar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         app.add(body, "mainMenu");
