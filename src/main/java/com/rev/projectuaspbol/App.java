@@ -6,54 +6,48 @@ package com.rev.projectuaspbol;
 
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.border.LineBorder;
-
-
-
 
 public class App extends javax.swing.JFrame {
 
     dataHandler konekDB = new dataHandler();
-    Color warna_utama = new Color(254,115,93); //warna orange muda
-    Color warna_default = new Color(184,207,229);// warna biru ke abu-abuan
-    CardLayout cardLogin,cardBody,cardContent;
-    
-    
+    Color warna_utama = new Color(254, 115, 93); //warna orange muda
+    Color warna_default = new Color(184, 207, 229);// warna biru ke abu-abuan
+    CardLayout cardLogin, cardBody, cardContent;
+
     public App() {
         initComponents();
         this.setLocationRelativeTo(null);
-      
-        
-        
+
         /*area login panel*/
         loginButton.setBorder(null);
         loginButton.setBorderPainted(false);
         loginButton.setFocusPainted(false);
-         
+
         nimField.setBorder(null);
         passwordField.setBorder(null);
         /*==================================*/
-        
-        /*area daftar panel*/
-        daftarAlamatField.setBorder(new LineBorder(warna_default,2));
-        daftarNamaField.setBorder(new LineBorder(warna_default,2));
-        daftarNimField.setBorder(new LineBorder(warna_default,2));
-        daftarPasswordField.setBorder(new LineBorder(warna_default,2));
-        
+
+ /*area daftar panel*/
+        daftarAlamatField.setBorder(new LineBorder(warna_default, 2));
+        daftarNamaField.setBorder(new LineBorder(warna_default, 2));
+        daftarNimField.setBorder(new LineBorder(warna_default, 2));
+        daftarPasswordField.setBorder(new LineBorder(warna_default, 2));
+
         /*==================================*/
-        
-         /*area edit profile panel*/
-        ubahNamaField.setBorder(new LineBorder(warna_default,2));
-        ubahAlamatField.setBorder(new LineBorder(warna_default,2));
-        ubahNimField.setBorder(new LineBorder(warna_default,2));
-        ubahPasswordField.setBorder(new LineBorder(warna_default,2));
+ /*area edit profile panel*/
+        ubahNamaField.setBorder(new LineBorder(warna_default, 2));
+        ubahAlamatField.setBorder(new LineBorder(warna_default, 2));
+        ubahNimField.setBorder(new LineBorder(warna_default, 2));
+        ubahPasswordField.setBorder(new LineBorder(warna_default, 2));
         /*==================================*/
-        
-        
-        cardLogin = (CardLayout)(login.getLayout());
+
+        cardLogin = (CardLayout) (login.getLayout());
         cardBody = (CardLayout) (app.getLayout());
         cardContent = (CardLayout) (content.getLayout());
-        
+
     }
 
     /**
@@ -1381,7 +1375,7 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel1MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-      cardLogin.show(login, "daftarCard");
+        cardLogin.show(login, "daftarCard");
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void daftarNimFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarNimFieldActionPerformed
@@ -1401,13 +1395,13 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void daftarAlamatFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_daftarAlamatFieldFocusGained
-        Color warna_utama = new Color(254,115,93);
-        daftarAlamatField.setBorder(new LineBorder(warna_utama,2));
+        Color warna_utama = new Color(254, 115, 93);
+        daftarAlamatField.setBorder(new LineBorder(warna_utama, 2));
     }//GEN-LAST:event_daftarAlamatFieldFocusGained
 
     private void daftarAlamatFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_daftarAlamatFieldFocusLost
-        Color warna_default = new Color(184,207,229);
-        daftarAlamatField.setBorder(new LineBorder(warna_default,2));
+        Color warna_default = new Color(184, 207, 229);
+        daftarAlamatField.setBorder(new LineBorder(warna_default, 2));
     }//GEN-LAST:event_daftarAlamatFieldFocusLost
 
     private void daftarPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarPasswordFieldActionPerformed
@@ -1428,35 +1422,49 @@ public class App extends javax.swing.JFrame {
 
     private void daftarNamaFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_daftarNamaFieldFocusGained
 
-          daftarNamaField.setBorder(new LineBorder(warna_utama,2));
+        daftarNamaField.setBorder(new LineBorder(warna_utama, 2));
     }//GEN-LAST:event_daftarNamaFieldFocusGained
 
     private void daftarNamaFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_daftarNamaFieldFocusLost
 
-        daftarNamaField.setBorder(new LineBorder(warna_default,2));
+        daftarNamaField.setBorder(new LineBorder(warna_default, 2));
     }//GEN-LAST:event_daftarNamaFieldFocusLost
 
     private void daftarNimFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_daftarNimFieldFocusGained
-        
-        daftarNimField.setBorder(new LineBorder(warna_utama,2));
+
+        daftarNimField.setBorder(new LineBorder(warna_utama, 2));
     }//GEN-LAST:event_daftarNimFieldFocusGained
 
     private void daftarPasswordFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_daftarPasswordFieldFocusGained
-         daftarPasswordField.setBorder(new LineBorder(warna_utama,2));
-       
+        daftarPasswordField.setBorder(new LineBorder(warna_utama, 2));
+
     }//GEN-LAST:event_daftarPasswordFieldFocusGained
 
     private void daftarNimFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_daftarNimFieldFocusLost
-        daftarNimField.setBorder(new LineBorder(warna_default,2));
+        daftarNimField.setBorder(new LineBorder(warna_default, 2));
     }//GEN-LAST:event_daftarNimFieldFocusLost
 
     private void daftarPasswordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_daftarPasswordFieldFocusLost
-        daftarPasswordField.setBorder(new LineBorder(warna_default,2));
+        daftarPasswordField.setBorder(new LineBorder(warna_default, 2));
     }//GEN-LAST:event_daftarPasswordFieldFocusLost
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        cardBody.show(app, "mainMenu");
-        cardContent.show(content, "dashboardCard");
+        String nimLogin = nimField.getText();
+        String passLogin = passwordField.getText();
+        try {
+            ResultSet hasil = konekDB.cariPeserta(nimLogin, passLogin);
+
+            if (hasil.next()) {
+                nimField.setText(hasil.getString("PESERTANIM"));
+                passwordField.setText(hasil.getString("PESERTANIM"));
+            }
+            
+            cardBody.show(app, "mainMenu");
+            cardContent.show(content, "dashboardCard");
+        } catch (SQLException e) {
+
+        }
+
         /* if (nimField.getText().equals("") && passwordField.getText().equals("")) {
             alertNotif.setForeground(Color.red);
         } else {
@@ -1464,7 +1472,7 @@ public class App extends javax.swing.JFrame {
             cardBody.show(app, "mainMenu");
             cardContent.show(content, "dashboardContent");
         }
-        */
+         */
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void tambahMatkulButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahMatkulButtonActionPerformed
@@ -1472,7 +1480,7 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_tambahMatkulButtonActionPerformed
 
     private void kelaskuButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kelaskuButtonMouseClicked
-         cardContent.show(content, "kelaskuCard");
+        cardContent.show(content, "kelaskuCard");
     }//GEN-LAST:event_kelaskuButtonMouseClicked
 
     private void dashboardButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardButtonMouseClicked
@@ -1489,7 +1497,7 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_logOutButtonMouseClicked
 
     private void keuanganButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_keuanganButtonMouseClicked
-         cardContent.show(content, "transaksiCard");
+        cardContent.show(content, "transaksiCard");
     }//GEN-LAST:event_keuanganButtonMouseClicked
 
     private void bayarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bayarButtonActionPerformed
@@ -1497,11 +1505,11 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_bayarButtonActionPerformed
 
     private void ubahNamaFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ubahNamaFieldFocusGained
-        ubahNamaField.setBorder(new LineBorder(warna_utama,2));
+        ubahNamaField.setBorder(new LineBorder(warna_utama, 2));
     }//GEN-LAST:event_ubahNamaFieldFocusGained
 
     private void ubahNamaFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ubahNamaFieldFocusLost
-         ubahNamaField.setBorder(new LineBorder(warna_default,2));
+        ubahNamaField.setBorder(new LineBorder(warna_default, 2));
     }//GEN-LAST:event_ubahNamaFieldFocusLost
 
     private void ubahNamaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubahNamaFieldActionPerformed
@@ -1509,11 +1517,11 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_ubahNamaFieldActionPerformed
 
     private void ubahAlamatFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ubahAlamatFieldFocusGained
-         ubahAlamatField.setBorder(new LineBorder(warna_utama,2));
+        ubahAlamatField.setBorder(new LineBorder(warna_utama, 2));
     }//GEN-LAST:event_ubahAlamatFieldFocusGained
 
     private void ubahAlamatFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ubahAlamatFieldFocusLost
-         ubahAlamatField.setBorder(new LineBorder(warna_default,2));
+        ubahAlamatField.setBorder(new LineBorder(warna_default, 2));
     }//GEN-LAST:event_ubahAlamatFieldFocusLost
 
     private void ubahAlamatFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubahAlamatFieldActionPerformed
@@ -1521,11 +1529,11 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_ubahAlamatFieldActionPerformed
 
     private void ubahNimFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ubahNimFieldFocusGained
-         ubahNimField.setBorder(new LineBorder(warna_utama,2));
+        ubahNimField.setBorder(new LineBorder(warna_utama, 2));
     }//GEN-LAST:event_ubahNimFieldFocusGained
 
     private void ubahNimFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ubahNimFieldFocusLost
-        ubahNimField.setBorder(new LineBorder(warna_default,2));
+        ubahNimField.setBorder(new LineBorder(warna_default, 2));
     }//GEN-LAST:event_ubahNimFieldFocusLost
 
     private void ubahNimFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubahNimFieldActionPerformed
@@ -1533,11 +1541,11 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_ubahNimFieldActionPerformed
 
     private void ubahPasswordFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ubahPasswordFieldFocusGained
-        ubahPasswordField.setBorder(new LineBorder(warna_utama,2));
+        ubahPasswordField.setBorder(new LineBorder(warna_utama, 2));
     }//GEN-LAST:event_ubahPasswordFieldFocusGained
 
     private void ubahPasswordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ubahPasswordFieldFocusLost
-        ubahPasswordField.setBorder(new LineBorder(warna_default,2));
+        ubahPasswordField.setBorder(new LineBorder(warna_default, 2));
     }//GEN-LAST:event_ubahPasswordFieldFocusLost
 
     private void ubahPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubahPasswordFieldActionPerformed
@@ -1549,7 +1557,7 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_ubahButtonActionPerformed
 
     private void editProfileButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editProfileButtonMouseClicked
-         cardContent.show(content, "editProfileCard");
+        cardContent.show(content, "editProfileCard");
     }//GEN-LAST:event_editProfileButtonMouseClicked
 
     private void daftarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarButtonActionPerformed
@@ -1560,19 +1568,19 @@ public class App extends javax.swing.JFrame {
         String tipePeserta = null;
         if (internallButton.isSelected()) {
             tipePeserta = "external";
-        }else if (profesionalButton.isSelected()) {
-               tipePeserta = "profesional";
-        }else if (externalButon.isSelected()) {
-             tipePeserta = "external";
+        } else if (profesionalButton.isSelected()) {
+            tipePeserta = "profesional";
+        } else if (externalButon.isSelected()) {
+            tipePeserta = "external";
         }
-        konekDB.tambahDataPeminjam(new Peserta(namaPeserta,nimPeserta,passwordPeserta,alamatPeserta,tipePeserta));
-        
+        konekDB.tambahDataPeminjam(new Peserta(namaPeserta, nimPeserta, passwordPeserta, alamatPeserta, tipePeserta));
+
         daftarNamaField.setText("");
         daftarNimField.setText("");
         daftarAlamatField.setText("");
         daftarPasswordField.setText("");
-        
-                    
+
+
     }//GEN-LAST:event_daftarButtonActionPerformed
 
     /**
