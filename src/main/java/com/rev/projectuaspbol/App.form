@@ -419,9 +419,9 @@
                               <Component id="labelNimField" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="judul_panel_daftar" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="externalButton" min="-2" max="-2" attributes="0"/>
+                                  <Component id="internallButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="internalButon" min="-2" max="-2" attributes="0"/>
+                                  <Component id="externalButon" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="profesionalButton" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -445,8 +445,8 @@
                                   <Component id="judul_panel_daftar" min="-2" pref="48" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="externalButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="internalButon" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="internallButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="externalButon" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="profesionalButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
@@ -507,6 +507,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="DAFTAR"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="daftarButtonActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelNamaField">
                   <Properties>
@@ -580,7 +583,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="daftarPasswordFieldActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="internalButon">
+                <Component class="javax.swing.JRadioButton" name="externalButon">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="groupTipeMahasiswa"/>
@@ -591,10 +594,10 @@
                     <Property name="text" type="java.lang.String" value="External"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="internalButonActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="externalButonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="externalButton">
+                <Component class="javax.swing.JRadioButton" name="internallButton">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="groupTipeMahasiswa"/>
@@ -605,7 +608,7 @@
                     <Property name="text" type="java.lang.String" value="Internal"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="externalButtonActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="internallButtonActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="profesionalButton">
@@ -646,7 +649,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="navbar" max="32767" attributes="0"/>
-                  <Component id="content" alignment="0" pref="600" max="32767" attributes="0"/>
+                  <Component id="content" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>

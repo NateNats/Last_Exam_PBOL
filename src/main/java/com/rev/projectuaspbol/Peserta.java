@@ -4,17 +4,98 @@
  */
 package com.rev.projectuaspbol;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author adyat
  */
-public abstract class Peserta {
-    String noIdentitas;
-    String nama;
-    double tagihan;
+public class Peserta {
+    private String noIdentitas;
+    private String nama;
+    private String nim;
+    private String password;
+    private String alamat;
+    private String tipe;
+    private double tagihan;
+    private ArrayList <Matakuliah> matkulList;
+
+    public String getTipe() {
+        return tipe;
+    }
+
+    public void setTipe(String tipe) {
+        this.tipe = tipe;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
+    public String getNoIdentitas() {
+        return noIdentitas;
+    }
+
+    public void setNoIdentitas(String noIdentitas) {
+        this.noIdentitas = noIdentitas;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getNim() {
+        return nim;
+    }
+
+    public void setNim(String nim) {
+        this.nim = nim;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public double getTagihan() {
+        return tagihan;
+    }
+
+    public void setTagihan(double tagihan) {
+        this.tagihan = tagihan;
+    }
+
+    public ArrayList<Matakuliah> getMatkulList() {
+        return matkulList;
+    }
+
+    public void setMatkulList(ArrayList<Matakuliah> matkulList) {
+        this.matkulList = matkulList;
+    }
 
     public Peserta(String noIdentitas, String nama) {
         this.noIdentitas = noIdentitas;
         this.nama = nama;
     }
+
+    public Peserta(String nama, String nim, String password, String alamat, String tipe) {
+        this.nama = nama;
+        this.nim = nim;
+        this.password = password;
+        this.alamat = alamat;
+        this.tipe = tipe;
+    }
+    
+    
 }

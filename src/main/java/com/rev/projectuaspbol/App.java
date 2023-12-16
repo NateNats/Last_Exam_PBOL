@@ -13,7 +13,7 @@ import javax.swing.border.LineBorder;
 
 public class App extends javax.swing.JFrame {
 
-    
+    dataHandler konekDB = new dataHandler();
     Color warna_utama = new Color(254,115,93); //warna orange muda
     Color warna_default = new Color(184,207,229);// warna biru ke abu-abuan
     CardLayout cardLogin,cardBody,cardContent;
@@ -94,8 +94,8 @@ public class App extends javax.swing.JFrame {
         daftarNimField = new javax.swing.JTextField();
         labelPasswordField = new javax.swing.JLabel();
         daftarPasswordField = new javax.swing.JTextField();
-        internalButon = new javax.swing.JRadioButton();
-        externalButton = new javax.swing.JRadioButton();
+        externalButon = new javax.swing.JRadioButton();
+        internallButton = new javax.swing.JRadioButton();
         profesionalButton = new javax.swing.JRadioButton();
         body = new javax.swing.JPanel();
         navbar = new javax.swing.JPanel();
@@ -400,6 +400,11 @@ public class App extends javax.swing.JFrame {
         daftarButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         daftarButton.setForeground(new java.awt.Color(255, 255, 255));
         daftarButton.setText("DAFTAR");
+        daftarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                daftarButtonActionPerformed(evt);
+            }
+        });
 
         labelNamaField.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelNamaField.setForeground(new java.awt.Color(254, 115, 93));
@@ -473,21 +478,21 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        groupTipeMahasiswa.add(internalButon);
-        internalButon.setForeground(new java.awt.Color(254, 115, 93));
-        internalButon.setText("External");
-        internalButon.addActionListener(new java.awt.event.ActionListener() {
+        groupTipeMahasiswa.add(externalButon);
+        externalButon.setForeground(new java.awt.Color(254, 115, 93));
+        externalButon.setText("External");
+        externalButon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                internalButonActionPerformed(evt);
+                externalButonActionPerformed(evt);
             }
         });
 
-        groupTipeMahasiswa.add(externalButton);
-        externalButton.setForeground(new java.awt.Color(254, 115, 93));
-        externalButton.setText("Internal");
-        externalButton.addActionListener(new java.awt.event.ActionListener() {
+        groupTipeMahasiswa.add(internallButton);
+        internallButton.setForeground(new java.awt.Color(254, 115, 93));
+        internallButton.setText("Internal");
+        internallButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                externalButtonActionPerformed(evt);
+                internallButtonActionPerformed(evt);
             }
         });
 
@@ -519,9 +524,9 @@ public class App extends javax.swing.JFrame {
                     .addComponent(labelNimField)
                     .addComponent(judul_panel_daftar)
                     .addGroup(daftaPanelLayout.createSequentialGroup()
-                        .addComponent(externalButton)
+                        .addComponent(internallButton)
                         .addGap(30, 30, 30)
-                        .addComponent(internalButon)
+                        .addComponent(externalButon)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(profesionalButton))
                     .addComponent(daftarNamaField, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -540,8 +545,8 @@ public class App extends javax.swing.JFrame {
                         .addComponent(judul_panel_daftar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(daftaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(externalButton)
-                            .addComponent(internalButon)
+                            .addComponent(internallButton)
+                            .addComponent(externalButon)
                             .addComponent(profesionalButton))
                         .addGap(25, 25, 25)
                         .addComponent(labelNamaField)
@@ -1353,7 +1358,7 @@ public class App extends javax.swing.JFrame {
         bodyLayout.setVerticalGroup(
             bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(navbar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         app.add(body, "mainMenu");
@@ -1409,13 +1414,13 @@ public class App extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_daftarPasswordFieldActionPerformed
 
-    private void internalButonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_internalButonActionPerformed
+    private void externalButonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_externalButonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_internalButonActionPerformed
+    }//GEN-LAST:event_externalButonActionPerformed
 
-    private void externalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_externalButtonActionPerformed
+    private void internallButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_internallButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_externalButtonActionPerformed
+    }//GEN-LAST:event_internallButtonActionPerformed
 
     private void profesionalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profesionalButtonActionPerformed
         // TODO add your handling code here:
@@ -1547,6 +1552,29 @@ public class App extends javax.swing.JFrame {
          cardContent.show(content, "editProfileCard");
     }//GEN-LAST:event_editProfileButtonMouseClicked
 
+    private void daftarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarButtonActionPerformed
+        String namaPeserta = daftarNamaField.getText();
+        String nimPeserta = daftarNimField.getText();
+        String alamatPeserta = daftarAlamatField.getText();
+        String passwordPeserta = daftarPasswordField.getText();
+        String tipePeserta = null;
+        if (internallButton.isSelected()) {
+            tipePeserta = "external";
+        }else if (profesionalButton.isSelected()) {
+               tipePeserta = "profesional";
+        }else if (externalButon.isSelected()) {
+             tipePeserta = "external";
+        }
+        konekDB.tambahDataPeminjam(new Peserta(namaPeserta,nimPeserta,passwordPeserta,alamatPeserta,tipePeserta));
+        
+        daftarNamaField.setText("");
+        daftarNimField.setText("");
+        daftarAlamatField.setText("");
+        daftarPasswordField.setText("");
+        
+                    
+    }//GEN-LAST:event_daftarButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1600,9 +1628,9 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel dashboardButton;
     private javax.swing.JPanel editProfile;
     private javax.swing.JLabel editProfileButton;
-    private javax.swing.JRadioButton externalButton;
+    private javax.swing.JRadioButton externalButon;
     private javax.swing.ButtonGroup groupTipeMahasiswa;
-    private javax.swing.JRadioButton internalButon;
+    private javax.swing.JRadioButton internallButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
