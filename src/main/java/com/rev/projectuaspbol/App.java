@@ -31,7 +31,7 @@ public class App extends javax.swing.JFrame {
         loginButton.setBorder(null);
         loginButton.setBorderPainted(false);
         loginButton.setFocusPainted(false);
-
+        alertNotif.setVisible(false);
         nimField.setBorder(null);
         passwordField.setBorder(null);
         /*==================================*/
@@ -1477,9 +1477,15 @@ public class App extends javax.swing.JFrame {
 
         if (hasil != null) {
             System.out.println("Login Sukses cuyyy. NIM: " + hasil);
+            namaPeserta.setText(hasil);
+            alertNotif.setVisible(false);
+            nimField.setText("");
+            passwordField.setText("");
             cardBody.show(app, "mainMenu");
             cardContent.show(content, "dashboardContent");
         } else {
+            alertNotif.setVisible(true);
+            alertNotif.setForeground(Color.red);
             System.out.println("Login GAGAL :(");
 
         }

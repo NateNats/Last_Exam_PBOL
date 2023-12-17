@@ -19,11 +19,17 @@ import javax.swing.JOptionPane;
  * @author adyat
  */
 public class dataHandler {
-
+    
+    private String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE";
+    private String userid = "hr";
+    private String password = "vito123";
+    
+    /*punya reva*/
+    /* 
     String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE";
     String userid = "system";
     String password = "system";
-
+    */
     Connection conn;
 
     public void getConnection() throws SQLException {
@@ -73,7 +79,7 @@ public class dataHandler {
         try {
             getConnection();
 
-            String query = "SELECT NIMPESERTA FROM PESERTA WHERE NIMPESERTA = ? AND PASSWORDPESERTA = ?";
+            String query = "SELECT NAMAPESERTA FROM PESERTA WHERE NIMPESERTA = ? AND PASSWORDPESERTA = ?";
 
             try (PreparedStatement preparedStatement = conn.prepareStatement(query)) {
                 preparedStatement.setString(1, nim);
@@ -81,7 +87,7 @@ public class dataHandler {
 
                 try (ResultSet hasil = preparedStatement.executeQuery()) {
                     if (hasil.next()) {
-                        result = hasil.getString("NIMPESERTA");
+                        result = hasil.getString("NAMAPESERTA");
                     }
                 }
             }
