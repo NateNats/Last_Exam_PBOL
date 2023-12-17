@@ -68,23 +68,30 @@ public class dataHandler {
         }
     }
 
-    public ResultSet cariPeserta(String nim, String password) {
+    public String cariPeserta(String nim, String password) {
+        String result = null;
         try {
             getConnection();
-            String query = "SELECT * FROM PESERTA WHERE NIMPESERTA = ? AND PASSWORDPESERTA = ?";
+
+            String query = "SELECT NIMPESERTA FROM PESERTA WHERE NIMPESERTA = ? AND PASSWORDPESERTA = ?";
 
             try (PreparedStatement preparedStatement = conn.prepareStatement(query)) {
                 preparedStatement.setString(1, nim);
                 preparedStatement.setString(2, password);
-                
-                ResultSet hasil = preparedStatement.executeQuery();
-                return hasil;
+
+                try (ResultSet hasil = preparedStatement.executeQuery()) {
+                    if (hasil.next()) {
+                        result = hasil.getString("NIMPESERTA");
+                    }
+                }
             }
         } catch (SQLException ex) {
-            
+            ex.printStackTrace();
+        } finally {
+            close();
         }
-        
-        return null;
+
+        return result;
     }
 
     public static String generateRandomId(int length) {

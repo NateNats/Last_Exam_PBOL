@@ -1451,18 +1451,15 @@ public class App extends javax.swing.JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         String nimLogin = nimField.getText();
         String passLogin = passwordField.getText();
-        try {
-            ResultSet hasil = konekDB.cariPeserta(nimLogin, passLogin);
+        String hasil = konekDB.cariPeserta(nimLogin, passLogin);
 
-            if (hasil.next()) {
-                nimField.setText(hasil.getString("PESERTANIM"));
-                passwordField.setText(hasil.getString("PESERTANIM"));
-            }
-            
+        if (hasil != null) {
+            System.out.println("Login Sukses cuyyy. NIM: " + hasil);
             cardBody.show(app, "mainMenu");
-            cardContent.show(content, "dashboardCard");
-        } catch (SQLException e) {
-
+                cardContent.show(content, "dashboardContent");
+        } else {
+            System.out.println("Login GAGAL :(");
+            
         }
 
         /* if (nimField.getText().equals("") && passwordField.getText().equals("")) {
