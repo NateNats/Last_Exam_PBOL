@@ -21,8 +21,8 @@ import javax.swing.JOptionPane;
 public class dataHandler {
 
     String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE";
-    String userid = "hr";
-    String password = "vito123";
+    String userid = "system";
+    String password = "system";
 
     Connection conn;
 

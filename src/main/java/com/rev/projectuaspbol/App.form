@@ -1186,7 +1186,7 @@
                                   </Group>
                                   <Component id="tambahMatkulButton" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="48" max="32767" attributes="0"/>
+                              <EmptySpace pref="70" max="32767" attributes="0"/>
                               <Component id="logoPanelKelasku" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
@@ -1247,15 +1247,12 @@
                     <Component class="javax.swing.JComboBox" name="mataKuliahPilihan1">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="5">
-                            <StringItem index="0" value="pilih mata kuliah"/>
-                            <StringItem index="1" value="Pemograman Analisis Data"/>
-                            <StringItem index="2" value="INTERNET DAN APP"/>
-                            <StringItem index="3" value="STRUKTUR DATA NON LINEAR"/>
-                            <StringItem index="4" value="Algoritma Program"/>
-                          </StringArray>
+                          <StringArray count="0"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mataKuliahPilihan1ActionPerformed"/>
+                      </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
@@ -1271,15 +1268,12 @@
                     <Component class="javax.swing.JComboBox" name="mataKuliahPilihan2">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="5">
-                            <StringItem index="0" value="pilih mata kuliah"/>
-                            <StringItem index="1" value="Pemograman Analisis Data"/>
-                            <StringItem index="2" value="INTERNET DAN APP"/>
-                            <StringItem index="3" value="STRUKTUR DATA NON LINEAR"/>
-                            <StringItem index="4" value="Algoritma Program"/>
-                          </StringArray>
+                          <StringArray count="0"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mataKuliahPilihan2ActionPerformed"/>
+                      </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
@@ -1295,15 +1289,12 @@
                     <Component class="javax.swing.JComboBox" name="mataKuliahPilihan3">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="5">
-                            <StringItem index="0" value="pilih mata kuliah"/>
-                            <StringItem index="1" value="Pemograman Analisis Data"/>
-                            <StringItem index="2" value="INTERNET DAN APP"/>
-                            <StringItem index="3" value="STRUKTUR DATA NON LINEAR"/>
-                            <StringItem index="4" value="Algoritma Program"/>
-                          </StringArray>
+                          <StringArray count="0"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mataKuliahPilihan3ActionPerformed"/>
+                      </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
