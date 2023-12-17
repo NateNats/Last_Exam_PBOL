@@ -1456,7 +1456,7 @@ public class App extends javax.swing.JFrame {
         if (hasil != null) {
             System.out.println("Login Sukses cuyyy. NIM: " + hasil);
             cardBody.show(app, "mainMenu");
-                cardContent.show(content, "dashboardContent");
+            cardContent.show(content, "dashboardContent");
         } else {
             System.out.println("Login GAGAL :(");
             
