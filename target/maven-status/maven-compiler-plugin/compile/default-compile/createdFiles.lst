@@ -1,6 +1,5 @@
 com\rev\projectuaspbol\App$29.class
 com\rev\projectuaspbol\App$32.class
-com\rev\projectuaspbol\Pad.class
 com\rev\projectuaspbol\App$8.class
 com\rev\projectuaspbol\App$1.class
 com\rev\projectuaspbol\App$12.class
@@ -14,13 +13,11 @@ com\rev\projectuaspbol\App$2.class
 com\rev\projectuaspbol\App$33.class
 com\rev\projectuaspbol\App$28.class
 com\rev\projectuaspbol\App$9.class
-com\rev\projectuaspbol\IntApp.class
 com\rev\projectuaspbol\App$5.class
 com\rev\projectuaspbol\App$36.class
 com\rev\projectuaspbol\App$16.class
 com\rev\projectuaspbol\App$21.class
 com\rev\projectuaspbol\App$24.class
-com\rev\projectuaspbol\Sdnl.class
 com\rev\projectuaspbol\App$19.class
 com\rev\projectuaspbol\App$39.class
 com\rev\projectuaspbol\App$14.class
@@ -34,6 +31,7 @@ com\rev\projectuaspbol\dataHandler.class
 com\rev\projectuaspbol\Peserta.class
 com\rev\projectuaspbol\App$3.class
 com\rev\projectuaspbol\App$30.class
+com\rev\projectuaspbol\App$40.class
 com\rev\projectuaspbol\App$23.class
 com\rev\projectuaspbol\App$18.class
 com\rev\projectuaspbol\App$38.class
@@ -43,5 +41,4 @@ com\rev\projectuaspbol\App$26.class
 com\rev\projectuaspbol\App$11.class
 com\rev\projectuaspbol\App$34.class
 com\rev\projectuaspbol\App$31.class
-com\rev\projectuaspbol\Alpro.class
 com\rev\projectuaspbol\App$7.class

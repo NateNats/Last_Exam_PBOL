@@ -13,45 +13,11 @@ import java.util.ArrayList;
 public abstract class Matakuliah {
     String nama;
     String kode;
-
+    ArrayList<Peserta> peserta;
     public Matakuliah(String nama, String kode) {
         this.nama = nama;
         this.kode = kode;
     }
 }
 
-class Pad extends Matakuliah {
-    ArrayList<Peserta> peserta;
 
-    public Pad(String nama, String kode) {
-        super(nama, kode);
-        this.peserta  = new ArrayList<>();
-    }
-}
-
-class Alpro extends Matakuliah {
-    ArrayList<Peserta> peserta;
-
-    public Alpro(String nama, String kode) {
-        super(nama, kode);
-        this.peserta  = new ArrayList<>();
-    }
-}
-
-class Sdnl extends Matakuliah {
-    ArrayList<Peserta> peserta;
-
-    public Sdnl(String nama, String kode) {
-        super(nama, kode);
-        this.peserta  = new ArrayList<>();
-    }
-}
-
-class IntApp extends Matakuliah {
-    ArrayList<Peserta> peserta;
-
-    public IntApp(String nama, String kode) {
-        super(nama, kode);
-        this.peserta  = new ArrayList<>();
-    }
-}
