@@ -96,6 +96,11 @@ public class Peserta {
         this.alamat = alamat;
         this.tipe = tipe;
     }
+
+    @Override
+    public String toString() {
+        return "Peserta{" + "nama=" + nama + ", nim=" + nim + ", password=" + password + ", alamat=" + alamat + ", tipe=" + tipe + '}';
+    }
     
     
     
