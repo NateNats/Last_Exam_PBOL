@@ -62,9 +62,9 @@ public class dataHandler {
                 preparedStatement.setString(1, generateRandomId(4));
                 preparedStatement.setString(2, dataPeserta.getNim());
                 preparedStatement.setString(3, dataPeserta.getNama());
-                preparedStatement.setString(5, dataPeserta.getAlamat());
-                preparedStatement.setString(6, dataPeserta.getPassword());
-                preparedStatement.setString(4, dataPeserta.getTipe());
+                preparedStatement.setString(4, dataPeserta.getAlamat());
+                preparedStatement.setString(5, dataPeserta.getPassword());
+                preparedStatement.setString(6, dataPeserta.getTipe());
 
                 preparedStatement.executeQuery();
                 JOptionPane.showMessageDialog(null, "AKUN BERHASIL DITAMBAHKAN");
@@ -75,10 +75,10 @@ public class dataHandler {
             close();
         }
     }
-    
-    public String ambilStatusBayar(String nim){
+
+    public String ambilStatusBayar(String nim) {
         String status = null;
-        try{
+        try {
             getConnection();
             String query = "SELECT STATUS FROM STATUS_BAYAR WHERE NIMPESERTA = ?";
             PreparedStatement pst = conn.prepareStatement(query);
@@ -86,9 +86,8 @@ public class dataHandler {
 
             ResultSet hasil = pst.executeQuery();
 
-            if(hasil.next()) {
+            if (hasil.next()) {
                 status = hasil.getString("STATUS");
-               
 
             }
         } catch (SQLException e) {
@@ -96,24 +95,24 @@ public class dataHandler {
         } finally {
             close();
         }
-        
+
         return status;
     }
-    
-    public void updateStatusBayar(String nim){
-    try{
+
+    public void updateStatusBayar(String nim) {
+        try {
             getConnection();
             String query = "UPDATE STATUS_BAYAR SET STATUS = 'sudah bayar' WHERE NIMPESERTA = ?";
             PreparedStatement pst = conn.prepareStatement(query);
             pst.setString(1, nim);
             pst.executeQuery();
-           
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             close();
         }
-    
+
     }
 
     public int tambahDataMataKuliahPeserta(Peserta peserta, ArrayList<String> matakuliahPilihan) {
@@ -129,7 +128,7 @@ public class dataHandler {
             pst.setString(1, peserta.getNim());
             pst.setString(2, peserta.getNama());
             pst.setString(3, "belum bayar");
-             pst.executeQuery();
+            pst.executeQuery();
         } catch (SQLException ex) {
             JOptionPane.showConfirmDialog(null, ex);
 
