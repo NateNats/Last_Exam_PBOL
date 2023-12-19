@@ -24,15 +24,14 @@ import javax.swing.table.DefaultTableModel;
  */
 public class dataHandler {
 
-//    private String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE";
-//    private String userid = "hr";
-//    private String password = "vito123";
+    private String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE";
+    private String userid = "hr";
+    private String password = "vito123";
 
-    /*punya reva*/
-    String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE";
-    String userid = "system";
-    String password = "system";
-
+//    /*punya reva*/
+//    String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE";
+//    String userid = "system";
+//    String password = "system";
     Connection conn;
 
     public void getConnection() throws SQLException {
@@ -76,20 +75,104 @@ public class dataHandler {
             close();
         }
     }
+    
+    public String ambilStatusBayar(String nim){
+        String status = null;
+        try{
+            getConnection();
+            String query = "SELECT STATUS FROM STATUS_BAYAR WHERE NIMPESERTA = ?";
+            PreparedStatement pst = conn.prepareStatement(query);
+            pst.setString(1, nim);
+
+            ResultSet hasil = pst.executeQuery();
+
+            if(hasil.next()) {
+                status = hasil.getString("STATUS");
+               
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close();
+        }
+        
+        return status;
+    }
+    
+    public void updateStatusBayar(String nim){
+    try{
+            getConnection();
+            String query = "UPDATE STATUS_BAYAR SET STATUS = 'sudah bayar' WHERE NIMPESERTA = ?";
+            PreparedStatement pst = conn.prepareStatement(query);
+            pst.setString(1, nim);
+            pst.executeQuery();
+           
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close();
+        }
+    
+    }
 
     public int tambahDataMataKuliahPeserta(Peserta peserta, ArrayList<String> matakuliahPilihan) {
         int i = 0;
+        String biayaMatkul = null;
+        String transaksiId = generateTransaksiId(4);
+
+        //memasukan status pembayaran 
+        try {
+            getConnection();
+            String query = "INSERT INTO STATUS_BAYAR (NIMPESERTA,NAMAPESERTA,STATUS) VALUES (?, ?, ?)";
+            PreparedStatement pst = conn.prepareStatement(query);
+            pst.setString(1, peserta.getNim());
+            pst.setString(2, peserta.getNama());
+            pst.setString(3, "belum bayar");
+             pst.executeQuery();
+        } catch (SQLException ex) {
+            JOptionPane.showConfirmDialog(null, ex);
+
+        } finally {
+            close();
+
+        }
+
         for (String matakuliah : matakuliahPilihan) {
             try {
                 getConnection();
 
-                String query = "INSERT INTO TRANSAKSI_KULIAH (MATAKULIAH, NIM, NAMAPESERTA, TIPEPESERTA, TOTALBIAYA) VALUES (?, ?, ?, ?, ?)";
+                String query = "INSERT INTO TRANSAKSI_KULIAH (TRANSAKSIID,MATAKULIAH, NIMPESERTA, NAMAPESERTA, TIPEPESERTA, BIAYA) VALUES (?, ?, ?, ?, ?,?)";
                 PreparedStatement pst = conn.prepareStatement(query);
-                pst.setString(1, matakuliah);
-                pst.setString(2, peserta.getNim());
-                pst.setString(3, peserta.getNama());
-                pst.setString(4, "uaaa");
-                pst.setInt(5, 100000);
+
+                //ambil data matkul dari tabel matkul
+                try {
+                    getConnection();
+                    String queryMatkul = "SELECT BIAYA FROM MATAKULIAH WHERE MATAKULIAH = ?";
+                    PreparedStatement pstMatkul = conn.prepareStatement(queryMatkul);
+                    pstMatkul.setString(1, matakuliah);
+                    try (ResultSet hasil = pstMatkul.executeQuery()) {
+                        if (hasil.next()) {
+                            // Menggunakan nama kolom yang sesuai
+                            biayaMatkul = hasil.getString("BIAYA");
+
+                        }
+                    }
+
+                } catch (SQLException ex) {
+                    JOptionPane.showConfirmDialog(null, ex);
+
+                } finally {
+                    close();
+
+                }
+
+                pst.setString(1, transaksiId);
+                pst.setString(2, matakuliah);
+                pst.setString(3, peserta.getNim());
+                pst.setString(4, peserta.getNama());
+                pst.setString(5, peserta.getTipe());
+                pst.setString(6, biayaMatkul);
                 pst.executeQuery();
                 i = 1;
 
@@ -363,7 +446,7 @@ public class dataHandler {
         try {
             getConnection();
 
-            String query = "SELECT * TRANSAKSI_KULIAH WHERE NIMPESERTA = ?";
+            String query = "SELECT * FROM TRANSAKSI_KULIAH WHERE NIMPESERTA = ?";
 
             PreparedStatement pst = conn.prepareStatement(query);
             pst.setString(1, nim);
@@ -379,9 +462,12 @@ public class dataHandler {
                 table.addRow(dataIn);
             }
 
+            // Set the table model to the JTable
+            gui.setModel(table);
+
             return table;
         } catch (SQLException ex) {
-
+            ex.printStackTrace(); // Print error message to console or log it
         } finally {
             close();
         }
@@ -389,24 +475,24 @@ public class dataHandler {
         return table;
     }
 
-    public int totalBiaya(String nim) {
-        int countBiaya = 0;
+    public String totalBiaya(String nim) {
+        String countBiaya = null;
 
         try {
             getConnection();
 
-            String query = "SELECT COUNT(BIAYA) TRANSAKSI_KULIAH WHERE NIMPESERTA = ?";
+            String query = "SELECT SUM(BIAYA) AS TOTAL_BIAYA FROM TRANSAKSI_KULIAH WHERE NIMPESERTA = ?";
 
             PreparedStatement pst = conn.prepareStatement(query);
             pst.setString(1, nim);
-            
+
             try (ResultSet hasil = pst.executeQuery()) {
                 if (hasil.next()) {
-                    countBiaya = hasil.getInt(1);
+                    countBiaya = hasil.getInt("TOTAL_BIAYA") + "";
                 }
             }
         } catch (SQLException ex) {
-
+            ex.printStackTrace(); // Cetak pesan kesalahan ke konsol atau log
         }
 
         return countBiaya;
@@ -425,10 +511,22 @@ public class dataHandler {
         return randomId.toString();
     }
 
+    public static String generateTransaksiId(int length) {
+        String characters = "0123456789";
+        StringBuilder randomId = new StringBuilder("TP");
+
+        Random random = new Random();
+        for (int i = 1; i < length; i++) {  // Mulai dari indeks 1 karena indeks 0 sudah diisi "P"
+            int index = random.nextInt(characters.length());
+            randomId.append(characters.charAt(index));
+        }
+
+        return randomId.toString();
+    }
+
     public static void main(String[] args) throws SQLException {
         dataHandler dh = new dataHandler();
         dh.getConnection();
-        System.out.println(generateRandomId(4));
 
     }
 }
