@@ -150,7 +150,7 @@ public class dataHandler {
 
         try {
             getConnection();
-            String query = "SELECT MATAKULIAH FROM TRANSAKSI_KULIAH WHERE NIM = ?";
+            String query = "SELECT MATAKULIAH FROM TRANSAKSI_KULIAH WHERE NIMPESERTA = ?";
             PreparedStatement pst = conn.prepareStatement(query);
             pst.setString(1, nim);
 
@@ -179,7 +179,7 @@ public class dataHandler {
         try {
             getConnection();
 
-            String query = "SELECT MATAKULIAH FROM TRANSAKSI_KULIAH WHERE NIM = ?";
+            String query = "SELECT MATAKULIAH FROM TRANSAKSI_KULIAH WHERE NIMPESERTA = ?";
             PreparedStatement pst = conn.prepareStatement(query);
             pst.setString(1, nim);
 
@@ -217,8 +217,8 @@ public class dataHandler {
             ResultSet rs = st.executeQuery("SELECT * TRANSAKSI_KULIAH WHERE MATAKULIAH = Pemrograman Analisis Data");
 
             while (rs.next()) {
-                String nim = rs.getString("NIM");
-                String nama = rs.getString("NAMA");
+                String nim = rs.getString("NIMPESERTA");
+                String nama = rs.getString("NAMAPESERTA");
                 String tipe = rs.getString("TIPEPESERTA");
 
                 String[] dataIn = {nim, nama, tipe};
@@ -247,8 +247,8 @@ public class dataHandler {
             ResultSet rs = st.executeQuery("SELECT * TRANSAKSI_KULIAH WHERE MATAKULIAH = Algoritma Program");
 
             while (rs.next()) {
-                String nim = rs.getString("NIM");
-                String nama = rs.getString("NAMA");
+                String nim = rs.getString("NIMPESERTA");
+                String nama = rs.getString("NAMAPESERTA");
                 String tipe = rs.getString("TIPEPESERTA");
 
                 String[] dataIn = {nim, nama, tipe};
@@ -277,8 +277,8 @@ public class dataHandler {
             ResultSet rs = st.executeQuery("SELECT * TRANSAKSI_KULIAH WHERE MATAKULIAH = Internet Dan App");
 
             while (rs.next()) {
-                String nim = rs.getString("NIM");
-                String nama = rs.getString("NAMA");
+                String nim = rs.getString("NIMPESERTA");
+                String nama = rs.getString("NAMAPESERTA");
                 String tipe = rs.getString("TIPEPESERTA");
 
                 String[] dataIn = {nim, nama, tipe};
@@ -307,8 +307,8 @@ public class dataHandler {
             ResultSet rs = st.executeQuery("SELECT * TRANSAKSI_KULIAH WHERE MATAKULIAH = Struktur Data Non Linear");
 
             while (rs.next()) {
-                String nim = rs.getString("NIM");
-                String nama = rs.getString("NAMA");
+                String nim = rs.getString("NIMPESERTA");
+                String nama = rs.getString("NAMAPESERTA");
                 String tipe = rs.getString("TIPEPESERTA");
 
                 String[] dataIn = {nim, nama, tipe};
@@ -337,8 +337,8 @@ public class dataHandler {
             ResultSet rs = st.executeQuery("SELECT * TRANSAKSI_KULIAH WHERE MATAKULIAH = Pemrograman Berbasis Objek");
 
             while (rs.next()) {
-                String nim = rs.getString("NIM");
-                String nama = rs.getString("NAMA");
+                String nim = rs.getString("NIMPESERTA");
+                String nama = rs.getString("NAMAPESERTA");
                 String tipe = rs.getString("TIPEPESERTA");
 
                 String[] dataIn = {nim, nama, tipe};
