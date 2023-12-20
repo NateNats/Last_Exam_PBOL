@@ -16,7 +16,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 
 public class App extends javax.swing.JFrame {
-
+    
     dataHandler konekDB = new dataHandler();
     Color warna_utama = new Color(254, 115, 93); //warna orange muda
     Color warna_default = new Color(184, 207, 229);// warna biru ke abu-abuan
@@ -25,14 +25,14 @@ public class App extends javax.swing.JFrame {
     Peserta pesertaCari;
     String status;
     boolean bayar = false;
-
+    
     ClassLoader classLoader = App.class.getClassLoader();
     URL alproUrl = classLoader.getResource("logo-ALPRO.png");
     URL padUrl = classLoader.getResource("logo-PAD.png");
     URL sdnlUrl = classLoader.getResource("logo-SDNL.png");
     URL pboUrl = classLoader.getResource("logo-PBO.png");
     URL intappUrl = classLoader.getResource("logo-INTAPP.png");
-
+    
     ImageIcon logoAlpro = new ImageIcon(alproUrl);
     ImageIcon logoPAD = new ImageIcon(padUrl);
     ImageIcon logoINTAPP = new ImageIcon(intappUrl);
@@ -42,7 +42,7 @@ public class App extends javax.swing.JFrame {
     //list stack
     ArrayList<String> pilihan;
     ArrayList<String> mataKuliahListPeserta;
-
+    
     public App() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -73,13 +73,13 @@ public class App extends javax.swing.JFrame {
         ubahNimField.setBorder(new LineBorder(warna_default, 2));
         ubahPasswordField.setBorder(new LineBorder(warna_default, 2));
         /*==================================*/
-
+        
         cardLogin = (CardLayout) (login.getLayout());
         cardBody = (CardLayout) (app.getLayout());
         cardContent = (CardLayout) (content.getLayout());
-
+        
         setToPilihan();
-
+        
     }
 
     /**
@@ -1869,17 +1869,17 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_profesionalButtonActionPerformed
 
     private void daftarNamaFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_daftarNamaFieldFocusGained
-
+        
         daftarNamaField.setBorder(new LineBorder(warna_utama, 2));
     }//GEN-LAST:event_daftarNamaFieldFocusGained
 
     private void daftarNamaFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_daftarNamaFieldFocusLost
-
+        
         daftarNamaField.setBorder(new LineBorder(warna_default, 2));
     }//GEN-LAST:event_daftarNamaFieldFocusLost
 
     private void daftarNimFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_daftarNimFieldFocusGained
-
+        
         daftarNimField.setBorder(new LineBorder(warna_utama, 2));
     }//GEN-LAST:event_daftarNimFieldFocusGained
 
@@ -1908,10 +1908,11 @@ public class App extends javax.swing.JFrame {
         status = konekDB.cariStatus(this.nimPesertaSaatIni);
         
         if (pesertaCari != null) {
-
+            
             namaPeserta.setText(pesertaCari.getNama());
             namaPesertaAktif.setText(pesertaCari.getNama());
-
+            setToAllItem();
+            mataKuliahListPeserta = konekDB.cariMatkul(nimPesertaSaatIni);
             alertNotif.setVisible(false);
             nimField.setText("");
             passwordField.setText("");
@@ -1922,14 +1923,11 @@ public class App extends javax.swing.JFrame {
                 this.mataKuliahListPeserta = konekDB.ambilMataKuliahPeserta(nimLogin);
                 namaMatkul1.setText(mataKuliahListPeserta.get(0));
                 namaMatkul2.setText(mataKuliahListPeserta.get(1));
-
+                
                 listMatkulKelaskuAktif1.setText(mataKuliahListPeserta.get(0));
                 listMatkulKelaskuAktif2.setText(mataKuliahListPeserta.get(1));
                 listMatkulKelaskuAktif3.setText(mataKuliahListPeserta.get(2));
 
-//                listMatkulAktif1.setText(mataKuliahListPeserta.get(0));
-//               listMatkulAktif2.setText(mataKuliahListPeserta.get(1));
-//                listMatkulAktif3.setText(mataKuliahListPeserta.get(2));
                 //SET ICON SESUAI DENGAN string nama matkulnya
                 if (mataKuliahListPeserta.get(0).equals("Pemrograman Analisis Data")) {
                     logoMatkul1.setIcon(logoPAD);
@@ -1942,7 +1940,7 @@ public class App extends javax.swing.JFrame {
                 } else if (mataKuliahListPeserta.get(0).equals("Struktur Data Non Linear")) {
                     logoMatkul1.setIcon(logoSDNL);
                 }
-
+                
                 if (mataKuliahListPeserta.get(1).equals("Pemrograman Analisis Data")) {
                     logoMatkul2.setIcon(logoPAD);
                 } else if (mataKuliahListPeserta.get(1).equals("Internet Dan App")) {
@@ -1954,7 +1952,7 @@ public class App extends javax.swing.JFrame {
                 } else if (mataKuliahListPeserta.get(1).equals("Struktur Data Non Linear")) {
                     logoMatkul2.setIcon(logoSDNL);
                 }
-
+                
                 if (mataKuliahListPeserta.get(2).equals("Pemrograman Analisis Data")) {
                     iconAktifMatkul3.setIcon(logoPAD);
                 } else if (mataKuliahListPeserta.get(2).equals("Internet Dan App")) {
@@ -1966,11 +1964,9 @@ public class App extends javax.swing.JFrame {
                 } else if (mataKuliahListPeserta.get(2).equals("Struktur Data Non Linear")) {
                     iconAktifMatkul3.setIcon(logoSDNL);
                 }
-
+                
                 cardContent.show(content, "dashboardAktifCard");
-
-                setToAllItem();
-                addToTable();
+                
             }
             cardBody.show(app, "mainMenu");
             cardContent.show(content, "dashboardContent");
@@ -1978,7 +1974,7 @@ public class App extends javax.swing.JFrame {
             alertNotif.setVisible(true);
             alertNotif.setForeground(Color.red);
             System.out.println("Login GAGAL :(");
-
+            
         }
 
     }//GEN-LAST:event_loginButtonActionPerformed
@@ -1988,9 +1984,9 @@ public class App extends javax.swing.JFrame {
         mataKuliahListPeserta.add((String) mataKuliahPilihan2.getSelectedItem());
         mataKuliahListPeserta.add((String) mataKuliahPilihan3.getSelectedItem());
         int i = konekDB.tambahDataMataKuliahPeserta(pesertaCari, mataKuliahListPeserta);
-
+        
         int confirm = JOptionPane.showConfirmDialog(this, "Silahkan Lakukan Pembayaran pada bagian Keuangan.", "Konfirmasi", JOptionPane.YES_NO_CANCEL_OPTION);
-
+        
         if (confirm == 0) {
             konekDB.tableSetTransaksi(tabelTransaksi, nimPesertaSaatIni);
             cardContent.show(content, "transaksiCard");
@@ -2002,7 +1998,9 @@ public class App extends javax.swing.JFrame {
     private void kelaskuButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kelaskuButtonMouseClicked
         String statusBayar = konekDB.ambilStatusBayar(nimPesertaSaatIni);
         
-        addToTable();
+        if (!mataKuliahListPeserta.isEmpty()) {
+            addToTable();
+        }
         
         if ("belum bayar".equals(statusBayar) || statusBayar == null) {
             cardContent.show(content, "kelaskuCard");
@@ -2021,7 +2019,7 @@ public class App extends javax.swing.JFrame {
             } else if (mataKuliahListPeserta.get(0).equals("Struktur Data Non Linear")) {
                 iconAktifMatkul1.setIcon(logoSDNL);
             }
-
+            
             if (mataKuliahListPeserta.get(1).equals("Pemrograman Analisis Data")) {
                 iconAktifMatkul2.setIcon(logoPAD);
             } else if (mataKuliahListPeserta.get(1).equals("Internet Dan App")) {
@@ -2033,7 +2031,7 @@ public class App extends javax.swing.JFrame {
             } else if (mataKuliahListPeserta.get(1).equals("Struktur Data Non Linear")) {
                 iconAktifMatkul2.setIcon(logoSDNL);
             }
-
+            
             if (mataKuliahListPeserta.get(2).equals("Pemrograman Analisis Data")) {
                 iconAktifMatkul3.setIcon(logoPAD);
             } else if (mataKuliahListPeserta.get(2).equals("Internet Dan App")) {
@@ -2047,7 +2045,7 @@ public class App extends javax.swing.JFrame {
             }
             cardContent.show(content, "kelaskuAktifCard");
         }
-
+        
 
     }//GEN-LAST:event_kelaskuButtonMouseClicked
 
@@ -2069,7 +2067,7 @@ public class App extends javax.swing.JFrame {
             } else if (mataKuliahListPeserta.get(0).equals("Struktur Data Non Linear")) {
                 logoMatkul1.setIcon(logoSDNL);
             }
-
+            
             if (mataKuliahListPeserta.get(1).equals("Pemrograman Analisis Data")) {
                 logoMatkul2.setIcon(logoPAD);
             } else if (mataKuliahListPeserta.get(1).equals("Internet Dan App")) {
@@ -2088,7 +2086,18 @@ public class App extends javax.swing.JFrame {
 
     private void pesertaButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pesertaButtonMouseClicked
         cardContent.show(content, "pesertaCard");
-        addToTable();
+        System.out.println(mataKuliahListPeserta);
+        if (!mataKuliahListPeserta.isEmpty()) {
+            addToTable();
+        } else {
+            DefaultTableModel model = (DefaultTableModel) tabelPesertaMatkul1.getModel();
+            model.setRowCount(0);
+            tabelPesertaMatkul1.setModel(model);
+            tabelPesertaMatkul2.setModel(model);
+            tabelPesertaMatkul3.setModel(model);
+            
+        }
+
     }//GEN-LAST:event_pesertaButtonMouseClicked
 
     private void logOutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logOutButtonMouseClicked
@@ -2102,14 +2111,14 @@ public class App extends javax.swing.JFrame {
         if (status.equals("belum bayar")) {
             konekDB.tableSetTransaksi(tabelTransaksi, nimPesertaSaatIni);
         }
-        
+
     }//GEN-LAST:event_keuanganButtonMouseClicked
 
     private void bayarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bayarButtonActionPerformed
         String total = konekDB.totalBiaya(pesertaCari.getNim());
-
+        
         int confirm = JOptionPane.showConfirmDialog(this, "Total biaya dari semua matakuliah: " + total, "Konfirmasi", JOptionPane.YES_NO_OPTION);
-
+        
         if (confirm == 0) {
             try {
                 JOptionPane.showOptionDialog(
@@ -2122,7 +2131,7 @@ public class App extends javax.swing.JFrame {
                         new Object[]{},
                         null
                 );
-
+                
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -2130,7 +2139,7 @@ public class App extends javax.swing.JFrame {
             //set Null ke table transaksi karena pembayaran telah selesai
             DefaultTableModel table = (DefaultTableModel) tabelTransaksi.getModel();
             table.setRowCount(0);
-
+            
             String cek = konekDB.updateStatusBayar(pesertaCari.getNim());
             if (cek.equals("sudah bayar")) {
                 tabelTransaksi.setModel(table);
@@ -2192,7 +2201,7 @@ public class App extends javax.swing.JFrame {
         String alamat = ubahAlamatField.getText();
         String nim = ubahNimField.getText();
         String pass = ubahPasswordField.getText();
-
+        
         pesertaCari = konekDB.gantiData(nama, alamat, nim, pass, pesertaCari);
         System.out.println(pesertaCari);
         
@@ -2216,14 +2225,14 @@ public class App extends javax.swing.JFrame {
         } else if (profesionalButton.isSelected()) {
             tipePeserta = "profesional";
         }
-
+        
         konekDB.tambahDataPeminjam(new Peserta(konekDB.generateRandomId(4), namaPeserta, nimPeserta, passwordPeserta, alamatPeserta, tipePeserta));
-
+        
         daftarNamaField.setText("");
         daftarNimField.setText("");
         daftarAlamatField.setText("");
         daftarPasswordField.setText("");
-
+        
 
     }//GEN-LAST:event_daftarButtonActionPerformed
 
@@ -2261,47 +2270,51 @@ public class App extends javax.swing.JFrame {
     private void kembaliButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliButtonActionPerformed
         cardLogin.show(login, "loginCard");
     }//GEN-LAST:event_kembaliButtonActionPerformed
-
+    
     public void setToPilihan() {
         ArrayList<String> matakuliah = new ArrayList<>();
-
+        
         matakuliah.add("pilih mata kuliah");
         matakuliah.add("Pemrograman Analisis Data");
         matakuliah.add("Internet Dan App");
         matakuliah.add("Struktur Data Non Linear");
         matakuliah.add("Algoritma Program");
         matakuliah.add("Pemrograman Berbasis Objek");
-
+        
         for (String i : matakuliah) {
             mataKuliahPilihan1.addItem(i);
             mataKuliahPilihan2.addItem(i);
             mataKuliahPilihan3.addItem(i);
         }
     }
-
+    
     public void setToAllItem() {
         nama_keuangan.setText(pesertaCari.getNama());
         ubahNamaField.setText(pesertaCari.getNama());
-
+        
         ubahAlamatField.setText(pesertaCari.getAlamat());
-
+        
         nim_keuangan.setText(pesertaCari.getNim());
         ubahNimField.setText(pesertaCari.getNim());
-
+        
         tipe_keuangan.setText(pesertaCari.getTipe());
-
+        
         ubahPasswordField.setText(pesertaCari.getPassword());
     }
-
+    
     public void addToTable() {
-        DefaultTableModel tabel1 = (DefaultTableModel) tabelPesertaMatkul1.getModel();
-        tabel1.setRowCount(0);
-
+        DefaultTableModel tabel1;
+        
+        if (!mataKuliahListPeserta.isEmpty()) {
+            tabel1 = (DefaultTableModel) tabelPesertaMatkul1.getModel();
+            tabel1.setRowCount(0);
+        }
+        
         if (mataKuliahListPeserta.get(0).equals("Pemrograman Analisis Data")) {
             mataKuliah1.setText("Pemrograman Analisis Data");
             tabel1 = konekDB.tableSetPad(tabelPesertaMatkul1);
             tabelPesertaMatkul1.setModel(tabel1);
-
+            
         } else if (mataKuliahListPeserta.get(0).equals("Internet Dan App")) {
             mataKuliah1.setText("Internet Dan App");
             tabel1 = konekDB.tableSetIntApp(tabelPesertaMatkul1);
@@ -2323,10 +2336,10 @@ public class App extends javax.swing.JFrame {
             tabelPesertaMatkul1.setModel(tabel1);
             
         }
-
+        
         DefaultTableModel tabel2 = (DefaultTableModel) tabelPesertaMatkul2.getModel();
         tabel2.setRowCount(0);
-
+        
         if (mataKuliahListPeserta.get(1).equals("Pemrograman Analisis Data")) {
             mataKuliah2.setText("Pemrograman Analisis Data");
             tabel2 = konekDB.tableSetPad(tabelPesertaMatkul2);
@@ -2336,54 +2349,54 @@ public class App extends javax.swing.JFrame {
             mataKuliah2.setText("Internet Dan App");
             tabel2 = konekDB.tableSetPad(tabelPesertaMatkul2);
             tabelPesertaMatkul2.setModel(tabel2);
-
+            
         } else if (mataKuliahListPeserta.get(1).equals("Pemrograman Berbasis Objek")) {
             mataKuliah2.setText("Pemrograman Berbasis Objek");
             tabel2 = konekDB.tableSetPad(tabelPesertaMatkul2);
             tabelPesertaMatkul2.setModel(tabel2);
-
+            
         } else if (mataKuliahListPeserta.get(1).equals("Algoritma Program")) {
             mataKuliah2.setText("Algoritma Program");
             tabel2 = konekDB.tableSetPad(tabelPesertaMatkul2);
             tabelPesertaMatkul2.setModel(tabel2);
-
+            
         } else if (mataKuliahListPeserta.get(1).equals("Struktur Data Non Linear")) {
             mataKuliah2.setText("Struktur Data Non Linear");
             tabel2 = konekDB.tableSetPad(tabelPesertaMatkul2);
             tabelPesertaMatkul2.setModel(tabel2);
-
+            
         }
-
+        
         DefaultTableModel tabel3 = (DefaultTableModel) tabelPesertaMatkul3.getModel();
         tabel3.setRowCount(0);
-
+        
         if (mataKuliahListPeserta.get(2).equals("Pemrograman Analisis Data")) {
             mataKuliah3.setText("Pemrograman Analisis Data");
             tabel3 = konekDB.tableSetPad(tabelPesertaMatkul3);
             tabelPesertaMatkul3.setModel(tabel3);
-
+            
         } else if (mataKuliahListPeserta.get(2).equals("Internet Dan App")) {
             mataKuliah3.setText("Internet Dan App");
             tabel3 = konekDB.tableSetPad(tabelPesertaMatkul3);
             tabelPesertaMatkul3.setModel(tabel3);
-
+            
         } else if (mataKuliahListPeserta.get(2).equals("Pemrograman Berbasis Objek")) {
             mataKuliah3.setText("Pemrograman Berbasis Objek");
             tabel3 = konekDB.tableSetPad(tabelPesertaMatkul3);
             tabelPesertaMatkul3.setModel(tabel3);
-
+            
         } else if (mataKuliahListPeserta.get(2).equals("Algoritma Program")) {
             mataKuliah3.setText("Algoritma Program");
             tabel3 = konekDB.tableSetPad(tabelPesertaMatkul3);
             tabelPesertaMatkul3.setModel(tabel3);
-
+            
         } else if (mataKuliahListPeserta.get(2).equals("Struktur Data Non Linear")) {
             mataKuliah3.setText("Struktur Data Non Linear");
             tabel3 = konekDB.tableSetPad(tabelPesertaMatkul3);
             tabelPesertaMatkul3.setModel(tabel3);
-
+            
         }
-
+        
     }
 
     /**

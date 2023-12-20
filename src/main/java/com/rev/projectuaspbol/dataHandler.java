@@ -61,9 +61,9 @@ public class dataHandler {
                 preparedStatement.setString(1, dataPeserta.getNoIdentitas());
                 preparedStatement.setString(2, dataPeserta.getNim());
                 preparedStatement.setString(3, dataPeserta.getNama());
-                preparedStatement.setString(4, dataPeserta.getAlamat());
-                preparedStatement.setString(5, dataPeserta.getPassword());
-                preparedStatement.setString(6, dataPeserta.getTipe());
+                preparedStatement.setString(5, dataPeserta.getAlamat());
+                preparedStatement.setString(6, dataPeserta.getPassword());
+                preparedStatement.setString(4, dataPeserta.getTipe());
 
                 preparedStatement.executeQuery();
                 JOptionPane.showMessageDialog(null, "AKUN BERHASIL DITAMBAHKAN");
@@ -156,7 +156,20 @@ public class dataHandler {
                     try (ResultSet hasil = pstMatkul.executeQuery()) {
                         if (hasil.next()) {
                             // Menggunakan nama kolom yang sesuai
-                            biayaMatkul = hasil.getString("BIAYA");
+                            if (peserta.getTipe().equals("internal")) {
+                                biayaMatkul = hasil.getString("BIAYA");
+                                
+                            } else if (peserta.getTipe().equals("external")) {
+                                String a = hasil.getString("BIAYA");
+                                double b = Integer.parseInt(a) * 1.5;
+                                biayaMatkul = Double.toString(b);
+                                
+                            } else {
+                                String a = hasil.getString("BIAYA");
+                                double b = Integer.parseInt(a) * 2;
+                                biayaMatkul = Double.toString(b);
+                                
+                            }
 
                         }
                     }
@@ -591,7 +604,7 @@ public class dataHandler {
                     }
                 }
             }
-            
+
             return balikan;
 
         } catch (SQLException ex) {
