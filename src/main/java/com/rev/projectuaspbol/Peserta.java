@@ -89,7 +89,8 @@ public class Peserta {
         this.nama = nama;
     }
 
-    public Peserta(String nama, String nim, String password, String alamat, String tipe) {
+    public Peserta(String noId, String nama, String nim, String password, String alamat, String tipe) {
+        this.noIdentitas = noId;
         this.nama = nama;
         this.nim = nim;
         this.password = password;
