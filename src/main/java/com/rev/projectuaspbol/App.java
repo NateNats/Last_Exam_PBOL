@@ -2108,6 +2108,8 @@ public class App extends javax.swing.JFrame {
         mataKuliahPilihan2.removeAllItems();
         mataKuliahPilihan3.removeAllItems();
         
+        
+        
         setToPilihan();
     }//GEN-LAST:event_logOutButtonMouseClicked
 
